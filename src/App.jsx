@@ -1,7 +1,8 @@
 import './App.css'
 import { BrowserRouter,Routes, Route } from 'react-router-dom';
-import CardWeather from './components/CardWeather';
+// import CardWeather from './components/CardWeather';
 import Header from './components/Header';
+import TodayCard from './components/TodayCard';
 
 
 
@@ -10,7 +11,7 @@ function App() {
 		<BrowserRouter>
 			<Header/>
 			<Routes>
-				<Route path='/' element={<CardWeather/>}/> 
+				<Route path='/' element={<TodayCard/>}/> 
 			</Routes>
 		</BrowserRouter> 
 

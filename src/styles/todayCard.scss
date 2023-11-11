@@ -1,0 +1,60 @@
+.card {
+    position: relative;
+    display: flex;
+    border-radius: 10px;
+    padding: 2px 10px;
+    width: 20em;
+    height: 12em;
+    box-shadow: 2px 5px 10px rgb(56, 55, 55);
+    
+    .info {
+        position: relative;
+        width: 10em;
+        &::after {
+            content: "";
+            position: absolute;
+            border-radius: 10px;
+            width: 2px;
+            height: 10em;
+            top: 15px;
+            right: -5px;
+            background-color: rgba(128, 128, 128, 0.192);
+        }
+        .temperature {
+            margin:0;
+            margin-top: 35px;
+            margin-left: 10px;
+            font-size: 30px;
+            font-weight: 5;
+        }
+        .date {
+            position: absolute;
+            bottom: 0;
+            right: 10px;
+            font-size: 10px;
+            font-weight: 10;
+        }
+        .weather {
+            margin-top: -10px;
+            display: flex;
+            padding: 10px;
+            .typeWeather {
+                font-size: 20px;
+            }
+            img {
+                width: 5em;
+            }
+        }
+    }
+    .details {
+        padding: 40px 10px 20px 15px;
+        font-size: 12px;  
+        color: rgba(124, 119, 119, 0.719);
+        p {
+            margin: 6px !important;
+        }
+        span {
+            color: rgba(124, 119, 119, 0.836);
+        }
+    }
+}
