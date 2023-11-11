@@ -1,4 +1,8 @@
 @font-face {
     font-family: "merriweather";
-    src: url(../src/fonts/MerriweatherSans-Medium.ttf);
+    src: url(./assets/fonts/MerriweatherSans-Medium.ttf);
+}
+
+* {
+    font-family: "merriweather";
 }
