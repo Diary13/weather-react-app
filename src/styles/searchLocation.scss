@@ -1,18 +1,25 @@
 .container_search {
     display: flex;
     justify-content: center;
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    z-index: 3;
     .content {
         position: relative;
         text-align: center;
         h2 {
             letter-spacing: 2px;
+            color: white;
+            text-shadow: 1px 2px 5px black;
             &::after {
                 content: "";
                 width: 4em;
                 height: 4px;
-                background-color: rgba(0, 0, 0, 0.445);
+                background-color: white;
                 border-radius: 10px;
                 position: absolute;
+                box-shadow: 1px 2px 5px black;
                 top: 70px;
                left: 35%;
             }
@@ -25,27 +32,27 @@
             margin-top: 45px !important;
             .search_icon {
                 position: absolute;
-                right: 50px;
-                top: 8px;
-                color: grey;
+                right: 85px;
+                top: 7px;
+                color: rgb(248, 242, 242);
                 &:hover {
                     cursor: pointer;
                 }
             }
             input {
-                width: 20em;
+                width: 15em;
                 height: 2em;
-                background-color: transparent;
-                border: 1px solid rgba(128, 128, 128, 0.822);
+                background-color: rgba(255, 255, 255, 0.548);
                 border-radius: 20px;
+                border: none;
                 outline: none;
-                color: grey;
+                color: rgb(248, 242, 242);;
                 padding-left: 15px;
                 padding-right: 35px;
-                &::after {
-                    content: "";
-                    background: url(../../public/search.svg);
-                    position: absolute;
+                &::placeholder {
+                    color: whitesmoke;
+                    font-size: 12px;
+                    font-weight: 1 !important;
                 }
             }
         }

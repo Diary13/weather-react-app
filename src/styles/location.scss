@@ -1,0 +1,23 @@
+.card {
+    width: 15em;
+    height: 3em;
+    background-color: rgba(128, 128, 128, 0.644);
+    border-radius: 15px;
+    color: whitesmoke;
+    display: flex;
+    align-items: center;
+    padding: 5px 20px;
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.541);
+    .location_icon {
+        font-size: 20px;
+        padding-right: 10px;
+    }
+    .current {
+        font-size: 12px;
+    }
+    .countrie {
+        font-size: 13px;
+        color: white;
+        font-weight: bold;
+    }
+}
