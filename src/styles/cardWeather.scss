@@ -1,9 +1,9 @@
-.card {
+.card_carousel {
     position: relative;
     border-radius: 10px;
     padding: 2px 10px;
-    width: 10em;
-    height: 12em;
+    width: 9em;
+    height: 9em;
     box-shadow: 2px 5px 10px rgb(56, 55, 55);
     .temperature {
         margin:0;
@@ -20,14 +20,14 @@
         font-weight: 10;
     }
     .weather {
-        margin-top: 10px;
+        margin-top: -10px;
         display: flex;
         padding: 10px;
         .typeWeather {
-            font-size: 20px;
+            font-size: 15px;
         }
         img {
-            width: 5em;
+            width: 4em;
         }
     }
 }

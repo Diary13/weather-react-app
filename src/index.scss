@@ -5,11 +5,21 @@
 
 * {
     font-family: "merriweather";
-    
 }
+
 body {
-    height: 90vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 0 !important;
+    margin: 0 !important;
+    height: 100vh;
+    background:  url(../public/fond/pond1.jpg)  ,  no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    .back_blur {
+        width: 100% !important;
+        height: 100% !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        backdrop-filter: blur(10px);
+    }
 }

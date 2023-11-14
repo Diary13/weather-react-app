@@ -1,0 +1,48 @@
+/* Carousel.css */
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  button:hover {
+    color: #333;
+  }
+  
+  .carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .carousel-item {
+    // width: 100px !important;
+    // height: 100px !important;
+    flex: 0 0 33.33%; /* Display three items at a time */
+  }
+  
+  .active {
+    transform: translateX(-100%);
+  }
+  
+  
+  .img_item {
+    width: 100px !important;
+    height: 100px !important;
+    display: block;
+    margin: auto;
+  }
+  

@@ -2,7 +2,7 @@ import '../styles/cardWeather.scss';
 
 const CardWeather = () => {
     return (
-        <div className="card">
+        <div className="card_carousel">
             <h2 className='temperature'>20°C</h2>
             <div className="weather">
                 <h2 className='typeWeather'>Storm rain</h2>
