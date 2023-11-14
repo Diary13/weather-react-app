@@ -1,14 +1,16 @@
 import './App.css'
 import { BrowserRouter,Routes, Route } from 'react-router-dom';
+import Weather from './pages/weather';
 
 
 
 function App() {
   return (
-	<BrowserRouter>
-		<Routes>
-		</Routes>
-	</BrowserRouter>
+		<BrowserRouter>
+			<Routes>
+				<Route path='/' element={<Weather/>}/> 
+			</Routes>
+		</BrowserRouter> 
   )
 }
 

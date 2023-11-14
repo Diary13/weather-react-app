@@ -1,0 +1,41 @@
+nav {
+    height: 5em;
+    display: flex;
+    align-items: center;
+    ul {
+        display: flex;
+
+        li {
+            position: relative;
+            font-family: "merriweather";
+            list-style-type: none;
+            margin-left: 2em;
+            cursor: pointer;
+            .active {
+                color: rgb(26, 58, 26);
+                &::after {
+                    width: 20px;
+                }
+            }
+            a {
+                color: rgb(27, 26, 26);
+                text-decoration: none;
+                &::after{
+                    content: "";
+                    position: absolute;
+                    width: 0px;
+                    height: 4px;
+                    left: 25%;
+                    bottom: -5px;
+                    border-radius: 10px;
+                    background-color: rgb(26, 58, 26);
+                    transition:  all .3s ease;
+                }
+                &:hover::after {
+                    width: 100%;
+                    left: 0%;
+                }
+            }
+        }
+    }
+}

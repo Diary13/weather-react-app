@@ -1,0 +1,33 @@
+.card_carousel {
+    position: relative;
+    border-radius: 10px;
+    padding: 2px 10px;
+    width: 9em;
+    height: 9em;
+    box-shadow: 2px 5px 10px rgb(56, 55, 55);
+    .temperature {
+        margin:0;
+        margin-top: 10px;
+        margin-left: 10px;
+        font-size: 30px;
+        font-weight: 5;
+    }
+    .date {
+        position: absolute;
+        bottom: 0;
+        right: 10px;
+        font-size: 10px;
+        font-weight: 10;
+    }
+    .weather {
+        margin-top: -10px;
+        display: flex;
+        padding: 10px;
+        .typeWeather {
+            font-size: 15px;
+        }
+        img {
+            width: 4em;
+        }
+    }
+}
