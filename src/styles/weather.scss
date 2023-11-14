@@ -6,21 +6,37 @@
     display: flex;
     position: relative;
     background-color: rgba(255, 255, 255, 0.932);
-   .mask {
-        position: absolute;
-        height: 100%;
-        width: 40em;
-        background: linear-gradient(to right,rgba(0, 255, 191, 0.185),rgba(0, 128, 28, 0.466)) ;
-        top: 0;
-        border-radius: 25px;
-        z-index: 2;
-   }
-    .img_fond {
-        height: 100%;
-        width: 40em;
-        object-fit:fill;
-        border-radius: 25px;
+    .left_side {
+        position: relative;
+        .logo {
+            position: absolute;
+            left: 25px;
+            top: 30px;
+            font-size: 16px;
+            letter-spacing: 3px;
+            font-weight: bold;
+            color: white;
+            z-index: 999;
+            text-transform: uppercase;
+            text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.158);
+        }
+        .mask {
+            position: absolute;
+            height: 100%;
+            width: 40em;
+            background: linear-gradient(to right,rgba(0, 255, 191, 0.185),rgba(0, 128, 28, 0.466)) ;
+            top: 0;
+            border-radius: 25px;
+            z-index: 2;
+       }
+        .img_fond {
+            height: 100%;
+            width: 40em;
+            object-fit:fill;
+            border-radius: 25px;
+        }
     }
+  
     .today,.daily {
         padding-left: 40px;
     }

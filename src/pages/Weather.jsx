@@ -4,7 +4,7 @@ import pond1  from '../../public/fond/pond2.jpg';
 import SearchLocation from '../components/SearchLocation';
 import TodayCard from '../components/TodayCard';
 import CardWeather from '../components/CardWeather';
-import Carousel from '../components/Carousel';
+import Location from '../components/Location';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination} from 'swiper/modules';
 import 'swiper/css';
@@ -20,7 +20,9 @@ const Weather = () => {
     return (
       
         <div className='main_container'>
-            <div>
+            <div className='left_side'>
+                <span className='logo'>Weather</span>
+                <Location/>
                 <img className='img_fond' src={pond1} alt="F4"/>
                 <SearchLocation/>
                 <div className='mask'>

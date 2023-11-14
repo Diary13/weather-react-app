@@ -5,7 +5,7 @@ import '../styles/location.scss';
 
 const Location = () => {
     return (
-        <div className="card">
+        <div className="card_location">
            <FontAwesomeIcon className='location_icon' icon={faLocationDot}/>
            <div>
                 <span className='current'>Current location</span><br />
