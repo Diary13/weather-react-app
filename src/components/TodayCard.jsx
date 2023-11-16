@@ -1,5 +1,5 @@
 import '../styles/todayCard.scss';
-import weatherImg from '../utils/utils';
+import {weatherImg} from '../utils/utils';
 
 const TodayCard = ({weatherInfo}) => {
     //T kelvin = T deg + 273

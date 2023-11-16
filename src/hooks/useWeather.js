@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { generateDate } from '../utils/utils';
 
-const useWeather = (city) => {
+export const useWeather = (city) => {
     const [weatherValue, setWeatherValue] = useState();
     useEffect(() => {
         const fetchData = async()=> {
@@ -17,4 +18,24 @@ const useWeather = (city) => {
     return weatherValue;
 }
 
-export default useWeather;
+export const useNextDayWeather = () => {
+    const [weatherNextDayInfo, setWeatherNextDayInfo] = useState([]);
+    const otherDay = [];
+    useEffect(() => {
+        const kivy = async () => {
+            for (let i = 0; i < 4; i++) {
+                let item = {
+                    date: generateDate(i),
+                    temp: (Math.floor(Math.random() * 11) + 20) // [20 - 30]
+                }
+                otherDay.push(item);
+            }
+            return otherDay;
+        }
+        kivy().then((res)=> {
+            console.log("res: ", res);
+            setWeatherNextDayInfo(res);
+        })
+    },[]);
+    return weatherNextDayInfo;
+}

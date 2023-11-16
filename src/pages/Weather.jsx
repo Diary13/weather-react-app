@@ -8,7 +8,7 @@ import Location from '../components/Location';
 import { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination} from 'swiper/modules';
-import useWeather from '../hooks/useWeather';
+import {useWeather, useNextDayWeather } from '../hooks/useWeather';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -16,8 +16,7 @@ import 'swiper/css/navigation';
 const Weather = () => {
     const [city, setCity] = useState('Antananarivo');
     const weatherInfo = useWeather(city);
-  
-
+    const otherDayWeatherInfo = useNextDayWeather();
    
     const onSubmit = (e) => {
         e.preventDefault();
@@ -26,7 +25,7 @@ const Weather = () => {
         setCity(input.value);
         if(input.value.trim()) form.reset();
     }
-
+    
     return (
         <div className='main_container'>
             <div className='left_side'>
@@ -46,7 +45,9 @@ const Weather = () => {
                 <div className='daily'>
                     <h2>Daily</h2>
                     <div className='carousel'>
-                        <Swiper
+                    {/* {otherDayWeatherInfo.length} */}
+
+                    {otherDayWeatherInfo.length > 0 && (<Swiper
                             modules={[Navigation, Pagination]}
                             spaceBetween={30}
                             slidesPerView={2}
@@ -55,13 +56,10 @@ const Weather = () => {
                             >
                                 <div className='swiper-button-next'></div>
                                 <div className='swiper-button-prev'></div>
-                            <SwiperSlide><CardWeather/></SwiperSlide>
-                            <SwiperSlide><CardWeather/></SwiperSlide>
-                            <SwiperSlide><CardWeather/></SwiperSlide>
-                            <SwiperSlide><CardWeather/></SwiperSlide>
-                            <SwiperSlide><CardWeather/></SwiperSlide>
-                            <SwiperSlide><CardWeather/></SwiperSlide>
-                        </Swiper>
+                                {otherDayWeatherInfo.map((item,index) => {
+                                    <SwiperSlide key={index}><CardWeather info = {item}/> </SwiperSlide>
+                                })}
+                        </Swiper>)}
                     </div>
                 </div>
             </div>

@@ -1,14 +1,15 @@
 import '../styles/cardWeather.scss';
 
-const CardWeather = () => {
+const CardWeather = ({info}) => {
+    console.log("kivy: " ,info);
     return (
         <div className="card_carousel">
-            <h2 className='temperature'>20°C</h2>
+            <h2 className='temperature'>{info.temp}°C</h2>
             <div className="weather">
                 <h2 className='typeWeather'>Storm rain</h2>
                 <img src="./src/assets/images/storm-rain.png" alt="" />
             </div>
-            <h3 className='date'>Tue 28, November 23</h3>
+            <h3 className='date'>{info.date}</h3>
         </div>
     )
 }
