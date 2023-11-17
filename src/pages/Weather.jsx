@@ -56,7 +56,7 @@ const Weather = () => {
                                 <div className='swiper-button-next'></div>
                                 <div className='swiper-button-prev'></div>
                                 {Array.from(Array(4).keys()).map((index) => {
-                                    <SwiperSlide key={index}>
+                                    return <SwiperSlide key={index}>
                                         <CardWeather info={{date: generateDate(index + 1), temp: Math.floor(Math.random() * 11) + 20}}/> 
                                     </SwiperSlide>
                                 })}

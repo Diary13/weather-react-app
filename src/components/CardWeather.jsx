@@ -7,7 +7,7 @@ const CardWeather = ({info}) => {
             <h2 className='temperature'>{info.temp}°C</h2>
             <div className="weather">
                 <h2 className='typeWeather'>Storm rain</h2>
-                <img src="./src/assets/images/storm-rain.png" alt="" />
+                <img src="./src/assets/images/storm.png" alt="F4" />
             </div>
             <h3 className='date'>{info.date}</h3>
         </div>
