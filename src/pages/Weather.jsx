@@ -1,6 +1,6 @@
 import '../styles/weather.scss';
 import Header from '../components/Header';
-import pont2  from '../../public/fond/pont2.jpg';
+import pont2 from '../assets/images/fond/pont2.jpg';
 import SearchLocation from '../components/SearchLocation';
 import TodayCard from '../components/TodayCard';
 import CardWeather from '../components/CardWeather';
@@ -9,6 +9,7 @@ import { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination} from 'swiper/modules';
 import {useWeather, useNextDayWeather } from '../hooks/useWeather';
+import { generateDate } from '../utils/utils';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -45,9 +46,7 @@ const Weather = () => {
                 <div className='daily'>
                     <h2>Daily</h2>
                     <div className='carousel'>
-                    {/* {otherDayWeatherInfo.length} */}
-
-                    {otherDayWeatherInfo.length > 0 && (<Swiper
+                        <Swiper
                             modules={[Navigation, Pagination]}
                             spaceBetween={30}
                             slidesPerView={2}
@@ -56,10 +55,12 @@ const Weather = () => {
                             >
                                 <div className='swiper-button-next'></div>
                                 <div className='swiper-button-prev'></div>
-                                {otherDayWeatherInfo.map((item,index) => {
-                                    <SwiperSlide key={index}><CardWeather info = {item}/> </SwiperSlide>
+                                {Array.from(Array(4).keys()).map((index) => {
+                                    <SwiperSlide key={index}>
+                                        <CardWeather info={{date: generateDate(index + 1), temp: Math.floor(Math.random() * 11) + 20}}/> 
+                                    </SwiperSlide>
                                 })}
-                        </Swiper>)}
+                        </Swiper>
                     </div>
                 </div>
             </div>

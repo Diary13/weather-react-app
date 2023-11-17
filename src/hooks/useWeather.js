@@ -22,20 +22,14 @@ export const useNextDayWeather = () => {
     const [weatherNextDayInfo, setWeatherNextDayInfo] = useState([]);
     const otherDay = [];
     useEffect(() => {
-        const kivy = async () => {
-            for (let i = 0; i < 4; i++) {
-                let item = {
-                    date: generateDate(i),
-                    temp: (Math.floor(Math.random() * 11) + 20) // [20 - 30]
-                }
-                otherDay.push(item);
+        for (let i = 0; i < 4; i++) {
+            let item = {
+                date: generateDate(i),
+                temp: (Math.floor(Math.random() * 11) + 20) // [20 - 30]
             }
-            return otherDay;
+            otherDay.push(item);
         }
-        kivy().then((res)=> {
-            console.log("res: ", res);
-            setWeatherNextDayInfo(res);
-        })
+        setWeatherNextDayInfo(otherDay);
     },[]);
     return weatherNextDayInfo;
 }
